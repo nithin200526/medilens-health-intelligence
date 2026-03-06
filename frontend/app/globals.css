@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-accent: #10B981;
+  --color-danger: #f43f5e;
+  --color-warning: #f59e0b;
+  --font-sans: var(--font-inter, "Inter"), var(--font-devanagari), var(--font-tamil), var(--font-telugu), ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Outfit', var(--font-sans);
+}
+
+/* ── Liquid Glass System ── */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+@utility liquid-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+@utility liquid-glass-dark {
+  background: rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Mesh Gradients ── */
+.mesh-gradient {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(210, 100%, 98%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(215, 100%, 94%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(200, 100%, 96%, 1) 0, transparent 50%);
+}
+
+.mesh-gradient-premium {
+  background: radial-gradient(circle at top left, #f0f7ff, transparent),
+    radial-gradient(circle at bottom right, #fff1f2, transparent),
+    radial-gradient(circle at center, #ffffff, transparent);
+  background-color: #fafafa;
+}
+
+/* ── Typography & Effects ── */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* ── Components & Animations ── */
+body {
+  background: #fdfdfe;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-glow {
+  position: relative;
+}
+
+.orbit-glow::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, var(--tw-shadow-color), transparent 70%);
+  opacity: 0.15;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Interactive Cards */
+.insight-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  @apply rounded-[2rem] p-8 transition-all duration-500 ease-out;
+}
+
+.insight-card:hover {
+  @apply -translate-y-2 border-primary/20 scale-[1.01];
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Custom Utilities ── */
+/* Force removal of all scrollbars */
+@utility perspective-1000 {
+  perspective: 1000px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  overflow: -moz-scrollbars-none !important;
+}
+
+/* ── Shared input style used across profile/settings forms ── */
+.input-field {
+  width: 100%;
+  height: 48px;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  color: #1e293b;
+  font-weight: 500;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input-field:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.input-field::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}

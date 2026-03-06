@@ -1,0 +1,162 @@
+{
+  "Hemoglobin": {
+    "Low": {
+      "clinical_meaning": "Low hemoglobin may indicate anemia, which can result from nutritional deficiencies (iron, B12, folate), blood loss, or chronic disease.",
+      "possible_symptoms": "Fatigue, weakness, pale or yellowish skin, shortness of breath, dizziness, irregular heartbeat.",
+      "general_advice": "Consult a doctor for further evaluation. Dietary improvements including iron-rich foods may help. Avoid self-medicating.",
+      "reference_range": "Male: 13.5–17.5 g/dL | Female: 12.0–15.5 g/dL",
+      "severity_note": "Values below 8 g/dL are considered severely low and require urgent evaluation."
+    },
+    "High": {
+      "clinical_meaning": "Elevated hemoglobin may indicate dehydration, polycythemia vera, lung disease, or living at high altitude.",
+      "possible_symptoms": "Headaches, dizziness, blurred vision, redness of the skin.",
+      "general_advice": "Seek medical evaluation. Ensure adequate hydration. A doctor may order additional tests.",
+      "reference_range": "Male: 13.5–17.5 g/dL | Female: 12.0–15.5 g/dL",
+      "severity_note": "Persistently high values should be evaluated by a hematologist."
+    }
+  },
+  "LDL": {
+    "High": {
+      "clinical_meaning": "Elevated LDL (Low-Density Lipoprotein) cholesterol increases the risk of plaque buildup in arteries, raising cardiovascular risk.",
+      "possible_symptoms": "Often asymptomatic. In severe cases, chest pain or signs of arterial blockage.",
+      "general_advice": "Lifestyle modifications are recommended: reduce saturated fats, increase physical activity, eat more fiber. Consult a doctor for evaluation.",
+      "reference_range": "Optimal: <100 mg/dL | Near Optimal: 100–129 mg/dL | Borderline High: 130–159 mg/dL | High: 160–189 mg/dL | Very High: ≥190 mg/dL",
+      "severity_note": "Values above 190 mg/dL are considered very high risk and may require medication."
+    },
+    "Low": {
+      "clinical_meaning": "Very low LDL is uncommon and may sometimes be associated with hyperthyroidism, malnutrition, or certain genetic conditions.",
+      "possible_symptoms": "Usually asymptomatic.",
+      "general_advice": "Discuss with your doctor as it may require further evaluation in unusual contexts.",
+      "reference_range": "Optimal: <100 mg/dL",
+      "severity_note": "Low LDL is rarely a clinical concern on its own."
+    }
+  },
+  "HDL": {
+    "Low": {
+      "clinical_meaning": "Low HDL (High-Density Lipoprotein) is associated with increased risk of heart disease. HDL helps remove cholesterol from arteries.",
+      "possible_symptoms": "Usually asymptomatic.",
+      "general_advice": "Increase physical activity, quit smoking, reduce trans fats. Consult your doctor.",
+      "reference_range": "Male: >40 mg/dL | Female: >50 mg/dL | Optimal: ≥60 mg/dL",
+      "severity_note": "Values below 35 mg/dL represent a major risk factor for cardiovascular disease."
+    },
+    "High": {
+      "clinical_meaning": "Elevated HDL is generally considered protective against heart disease. However, extremely high values may warrant investigation.",
+      "possible_symptoms": "Asymptomatic.",
+      "general_advice": "Maintain a healthy lifestyle. Very high HDL may be evaluated further by a doctor.",
+      "reference_range": "Optimal: ≥60 mg/dL",
+      "severity_note": "Levels above 100 mg/dL may require further investigation."
+    }
+  },
+  "Blood Glucose (Fasting)": {
+    "High": {
+      "clinical_meaning": "Elevated fasting blood glucose may indicate prediabetes or diabetes mellitus. The body may not be producing or using insulin effectively.",
+      "possible_symptoms": "Increased thirst, frequent urination, fatigue, blurred vision, slow-healing wounds.",
+      "general_advice": "Reduce sugar and refined carbohydrate intake. Increase physical activity. Consult a doctor for formal diabetes screening.",
+      "reference_range": "Normal: 70–99 mg/dL | Prediabetes: 100–125 mg/dL | Diabetes: ≥126 mg/dL",
+      "severity_note": "Values above 200 mg/dL with symptoms may indicate diabetes and require immediate medical attention."
+    },
+    "Low": {
+      "clinical_meaning": "Low blood glucose (hypoglycemia) may result from excessive insulin, fasting, or underlying metabolic conditions.",
+      "possible_symptoms": "Shakiness, sweating, confusion, rapid heartbeat, anxiety.",
+      "general_advice": "Consume fast-acting carbohydrates if symptomatic. Consult a doctor to identify the cause.",
+      "reference_range": "Normal: 70–99 mg/dL",
+      "severity_note": "Values below 54 mg/dL require urgent medical attention."
+    }
+  },
+  "Creatinine": {
+    "High": {
+      "clinical_meaning": "Elevated creatinine may indicate reduced kidney function, dehydration, or kidney disease.",
+      "possible_symptoms": "Fatigue, swelling in legs, decreased urination, nausea.",
+      "general_advice": "Ensure adequate hydration. Avoid NSAIDs. Consult a doctor for kidney function evaluation.",
+      "reference_range": "Male: 0.74–1.35 mg/dL | Female: 0.59–1.04 mg/dL",
+      "severity_note": "Rapidly rising creatinine may indicate acute kidney injury and requires urgent care."
+    },
+    "Low": {
+      "clinical_meaning": "Low creatinine may be associated with low muscle mass, poor protein intake, or pregnancy.",
+      "possible_symptoms": "Usually asymptomatic.",
+      "general_advice": "Discuss with a doctor if persistent. Nutritional assessment may be helpful.",
+      "reference_range": "Male: 0.74–1.35 mg/dL | Female: 0.59–1.04 mg/dL",
+      "severity_note": "Low creatinine is less commonly concerning but warrants follow-up."
+    }
+  },
+  "TSH": {
+    "High": {
+      "clinical_meaning": "An elevated TSH (Thyroid Stimulating Hormone) typically indicates an underactive thyroid (hypothyroidism). The pituitary gland produces more TSH to stimulate the thyroid.",
+      "possible_symptoms": "Fatigue, weight gain, cold intolerance, constipation, dry skin, depression.",
+      "general_advice": "A doctor should evaluate thyroid function with additional tests (T3, T4). Treatment may include thyroid hormone replacement.",
+      "reference_range": "Normal: 0.4–4.0 mIU/L",
+      "severity_note": "TSH above 10 mIU/L often indicates overt hypothyroidism requiring treatment."
+    },
+    "Low": {
+      "clinical_meaning": "Low TSH may indicate an overactive thyroid (hyperthyroidism) or excess thyroid hormone.",
+      "possible_symptoms": "Weight loss, rapid heartbeat, anxiety, tremors, excessive sweating.",
+      "general_advice": "Consult a doctor for further thyroid evaluation. Avoid excessive iodine or thyroid supplements.",
+      "reference_range": "Normal: 0.4–4.0 mIU/L",
+      "severity_note": "TSH below 0.1 mIU/L represents significant hyperthyroidism requiring medical attention."
+    }
+  },
+  "Platelets": {
+    "Low": {
+      "clinical_meaning": "Low platelet count (thrombocytopenia) may be linked to viral infections, autoimmune disorders, bone marrow issues, or certain medications.",
+      "possible_symptoms": "Easy bruising, prolonged bleeding, petechiae (small red spots on skin).",
+      "general_advice": "Avoid blood-thinning medications without consultation. Seek medical evaluation, especially for unexplained bruising.",
+      "reference_range": "Normal: 150,000–400,000 per microliter",
+      "severity_note": "Platelets below 50,000 may require medical management to prevent bleeding complications."
+    },
+    "High": {
+      "clinical_meaning": "Elevated platelet count (thrombocytosis) may be reactive (due to infection, inflammation, or surgery) or primary (bone marrow disorder).",
+      "possible_symptoms": "Often asymptomatic. May increase risk of blood clots.",
+      "general_advice": "Further evaluation recommended. Maintain adequate hydration.",
+      "reference_range": "Normal: 150,000–400,000 per microliter",
+      "severity_note": "Counts above 1,000,000 may significantly raise clot risk."
+    }
+  },
+  "WBC": {
+    "High": {
+      "clinical_meaning": "Elevated white blood cell count (leukocytosis) commonly indicates an active infection, inflammation, stress, or, rarely, blood disorders.",
+      "possible_symptoms": "Fever, fatigue, body aches depending on the underlying cause.",
+      "general_advice": "Consult a doctor for evaluation of underlying cause. Avoid self-prescribing antibiotics.",
+      "reference_range": "Normal: 4,500–11,000 cells per microliter",
+      "severity_note": "Very high WBC counts may indicate leukemia and require specialist evaluation."
+    },
+    "Low": {
+      "clinical_meaning": "Low WBC (leukopenia) may indicate viral infections, autoimmune disorders, bone marrow suppression, or medication side effects.",
+      "possible_symptoms": "Increased susceptibility to infections, fever.",
+      "general_advice": "Avoid crowded places to reduce infection risk. Consult a doctor immediately.",
+      "reference_range": "Normal: 4,500–11,000 cells per microliter",
+      "severity_note": "WBC below 2,000 may indicate a serious immune deficiency requiring urgent care."
+    }
+  },
+  "HbA1c": {
+    "High": {
+      "clinical_meaning": "Elevated HbA1c reflects average blood sugar levels over 2–3 months. High values indicate poor blood glucose control, consistent with prediabetes or diabetes.",
+      "possible_symptoms": "Fatigue, frequent urination, increased thirst, slow healing.",
+      "general_advice": "Dietary management, regular exercise, and doctor consultation are important. Medications may be adjusted if already on treatment.",
+      "reference_range": "Normal: <5.7% | Prediabetes: 5.7–6.4% | Diabetes: ≥6.5%",
+      "severity_note": "HbA1c above 9% indicates very poor control and high risk of complications."
+    },
+    "Low": {
+      "clinical_meaning": "Low HbA1c may indicate hypoglycemia tendencies, hemolytic anemia, or blood loss.",
+      "possible_symptoms": "Shakiness, dizziness, confusion if hypoglycemia episodes occur.",
+      "general_advice": "Discuss with your doctor, especially if on diabetes medications.",
+      "reference_range": "Normal: <5.7%",
+      "severity_note": "Consistently low HbA1c in diabetic patients may indicate over-treatment."
+    }
+  },
+  "Uric Acid": {
+    "High": {
+      "clinical_meaning": "Elevated uric acid (hyperuricemia) may lead to gout or kidney stones if persistent.",
+      "possible_symptoms": "Joint pain (especially in the big toe), redness, swelling of joints.",
+      "general_advice": "Reduce purine-rich foods (red meat, shellfish, organ meats), increase water intake, limit alcohol. Consult a doctor.",
+      "reference_range": "Male: 3.4–7.0 mg/dL | Female: 2.4–6.0 mg/dL",
+      "severity_note": "Values above 9 mg/dL significantly increase risk of gout attacks."
+    },
+    "Low": {
+      "clinical_meaning": "Low uric acid is uncommon and may be associated with certain medications or rare metabolic conditions.",
+      "possible_symptoms": "Usually asymptomatic.",
+      "general_advice": "Discuss with a doctor if noted consistently.",
+      "reference_range": "Male: 3.4–7.0 mg/dL | Female: 2.4–6.0 mg/dL",
+      "severity_note": "Low uric acid is rarely clinically significant."
+    }
+  }
+}
