@@ -31,7 +31,7 @@ MediLens provides a premium, "Liquid Glass" digital environment for managing you
 
 ## 🚀 Core Modules
 
-### 1. 📂 Document Engine (backend_old)
+### 1. 📂 Document Engine (backend)
 The brain of the operation. It handles high-precision OCR and clinical analysis of lab reports.
 - **Biomarker Extraction**: Automatically identifies values, units, and reference ranges.
 - **RAG-Powered Insights**: Uses a Retrieval-Augmented Generation engine to explain clinical results.
