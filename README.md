@@ -1,131 +1,108 @@
 <div align="center">
 
-# 🩺 MediLens
-### Grounded Medical Report Intelligence
+# 🩺 MediLens: Health Intelligence Platform
+### *Turning Clinical Lab Reports into Empathetic, Actionable Insights*
 
-An advanced, human-first health tracking platform that transforms dense, clinical lab reports into clear, empathetic, and actionable insights for patients and their families.
+[![MediLens Dashboard](https://img.shields.io/badge/MediLens-Premium_Dashboard-indigo.svg)](https://medilens.ai)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688.svg)](https://fastapi.tiangolo.com)
+[![Next.js](https://img.shields.io/badge/Next.js-UI-black.svg)](https://nextjs.org)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791.svg)](https://www.postgresql.org)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Integration-25D366.svg)](https://developers.facebook.com/docs/whatsapp/cloud-api)
+
+**MediLens** is an advanced health analysis platform designed to reduce patient anxiety by transforming dense, jargon-filled laboratory diagnostic reports into clear, empathetic, and visually engaging health narratives.
 
 </div>
 
 ---
 
-## 🌟 Overview
+## 🌟 Modern Health Experience
 
-MediLens is a full-stack health application designed to reduce patient anxiety and make medical data truly readable. Users can upload their raw laboratory diagnostic reports (PDFs) and have them instantly processed via OCR and analyzed by an advanced Retrieval-Augmented Generation (RAG) AI engine. 
+MediLens provides a premium, "Liquid Glass" digital environment for managing your family's health. It bridges the gap between raw medical data and human understanding.
 
-Instead of presenting users with a confusing spreadsheet of medical jargon, MediLens provides a gorgeous **"Liquid Glass" dashboard**, complete with color-coded alerts, plain English translations of what biomarkers mean, and a fully interactive AI Health Assistant.
+### 🎥 Feature Showcase
 
-## 🚀 Core Features
-
-### 1. Human-First Dashboard
-- **Visual Health Orb**: Animated, dynamic centerpieces instantly communicate the urgency of the patient's results (e.g., Stable, Watch, Critical).
-- **Insight Cards**: Technical laboratory values are translated into simple "What this means for you" bullet points, ensuring high comprehensibility.
-- **Liquid Glass Aesthetic**: A premium UI utilizing deep mesh gradients and high-end blur effects to create a calm, reassuring digital environment.
-
-### 2. Multi-Patient Family Hub
-- **Unified Management**: Caregivers can manage reports for multiple family members under a single account.
-- **Profile Segregation**: Each family member (e.g., parent, child) gets their own secure historical timeline and AI analysis context, ensuring data is never mixed up.
-
-### 3. Dual-Mode AI Assistant
-- **Contextual Report Mode**: Chat directly with a specific lab report. The AI understands the exact abnormal markers in the selected document and suggests relevant questions to ask.
-- **General Medical Mode**: A strictly-guarded medical encyclopedia. The AI is securely prompted to answer general health, biology, and nutrition queries while explicitly refusing to offer rogue diagnoses or prescriptions.
-
-### 4. Empathetic Multi-Language PDF Export
-- **Reassuring Printouts**: Patients can export simple, large-font PDFs designed perfectly for taking to the doctor—stripping away anxiety-inducing AI jargon.
-- **Dynamic AI Translation**: With the click of a button, the entire PDF (including UI labels and medical explanations) is dynamically sent through the LLM engine to be perfectly translated.
-- **Supported Languages**: English, Hindi (हिंदी), Tamil (தமிழ்), Telugu (తెలుగు), and Spanish (Español).
+*   **Human-First Dashboard**: Animated **Visual Health Orbs** instantly communicate your overall well-being.
+*   **Insight Cards**: Biomarker values are translated into "What this means for you" bullet points.
+*   **Family Hub**: Securely manage profiles for multiple family members in one place.
+*   **WhatsApp Delivery**: Get your analysis results sent directly to your phone as a PDF.
+*   **Dual-Mode AI Assistant**: Switch between Contextual Report Chat and General Health Encyclopedia.
 
 ---
 
-## 🏗️ Architecture Stack
+## 🚀 Core Modules
 
-**Frontend (Client Portal)**
-- Next.js 14 (App Router)
-- React & Tailwind CSS
-- Prisma ORM (SQLite Database)
-- Lucide React Icons
+### 1. 📂 Document Engine (backend_old)
+The brain of the operation. It handles high-precision OCR and clinical analysis of lab reports.
+- **Biomarker Extraction**: Automatically identifies values, units, and reference ranges.
+- **RAG-Powered Insights**: Uses a Retrieval-Augmented Generation engine to explain clinical results.
+- **Dynamic PDF Generation**: Creates clean, doctor-ready report summaries.
 
-**Backend (AI Engine & Processing)**
-- Python FastAPI
-- LangChain & Groq LLMs (Llama-3 models)
-- pdfplumber (Document parsing)
-- ReportLab (Dynamic PDF generation)
+### 2. 💬 WhatsApp Integration (whatsapp_backend)
+A dedicated microservice for seamless mobile health updates via **WhatsApp Cloud API**.
+- **Real-time Notifications**: Alerts when a new report is ready.
+- **PDF Delivery**: Directly sends the structured health report to your WhatsApp inbox.
+- **Best-Effort Greeting**: Auto-welcomes users upon phone registration.
+
+### 3. 🧠 Analysis & Translation (rag_engine)
+A shared intelligence library used by the backends to interact with LLMs (Grok/Llama-3).
+- **Multi-lingual Support**: Professional medical translation into Hindi (हिंदी), Tamil (தமிழ்), Telugu (తెలుగు), and Spanish (Español).
+- **Explanation Logic**: The core system prompts that ensure the AI remains empathetic yet clinically accurate.
 
 ---
 
-## 🛠️ Local Setup & Installation
+## 🏗️ Technical Stack
 
-Follow these steps to run MediLens locally. You will need two terminal windows open: one for the Python backend and one for the Next.js frontend.
+- **Frontend**: Next.js 14, Tailwind CSS, Lucide React, Framer Motion.
+- **Authentication**: NextAuth.js with Google OAuth.
+- **Database**: PostgreSQL (hosted on **Neon**) via Prisma ORM.
+- **Email**: SMTP integration via Nodemailer for analysis alerts.
+- **Backend API**: Dual FastAPI services (Processing & Messaging).
+- **AI/LLM**: Groq Llama-3 (70B/8B) and Grok-certified models.
+
+---
+
+## 🛠️ Getting Started
 
 ### Prerequisites
 - Node.js (v18+)
 - Python (v3.10+)
+- PostgreSQL (Neon recommended)
+- Meta WhatsApp Cloud API credentials
 
-### 1. Backend Setup
+### 1. Backend Services
+You will need to run both the Processing Engine and the WhatsApp Service.
 
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Create and activate a Python virtual environment:
-   ```bash
-   python -m venv venv
-   
-   # Windows:
-   .\venv\Scripts\activate
-   # Mac/Linux:
-   source venv/bin/activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Set up your Environment Variables:
-   Create a `.env` file in the `backend/` folder and add your free Groq API key:
-   ```env
-   GROQ_API_KEY=your_groq_api_key_here
-   GROK_MODEL=llama-3.3-70b-versatile
-   GROK_TEMPERATURE=0.2
-   GROK_MAX_TOKENS=8000
-   ```
-5. Start the FastAPI server:
-   ```bash
-   python main.py
-   # The server will start on http://127.0.0.1:8001
-   ```
+**Processing Engine (backend_old):**
+```bash
+cd backend_old
+pip install -r requirements.txt
+python main.py # Runs on port 8001
+```
 
-### 2. Frontend Setup
+**WhatsApp Service (whatsapp_backend):**
+```bash
+cd whatsapp_backend
+pip install -r requirements.txt
+python main.py # Runs on port 8002
+```
 
-1. Open a new terminal and navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install npm dependencies:
-   ```bash
-   npm install
-   ```
-3. Initialize the Prisma Database:
-   ```bash
-   npx prisma generate
-   npx prisma db push
-   ```
-4. Start the Next.js development server:
-   ```bash
-   npm run dev
-   # The application will be available at http://localhost:3000
-   ```
+### 2. Frontend Application
+```bash
+cd frontend
+npm install
+npx prisma generate
+npm run dev # Runs on port 3000
+```
+
+### 3. Environment Config
+Ensure you have `.env` files in `frontend/`, `backend_old/`, and `whatsapp_backend/` with the appropriate API keys for Google, Meta, and Groq.
 
 ---
 
-## ⚠️ Important Deployment Notes
-
-### Indic Language PDF Exports (Hindi, Tamil, Telugu)
-To export PDFs in complex Unicode scripts, the `ReportLab` engine requires a TrueType Font (TTF) that contains those specific glyphs.
-- **On Windows**: The backend automatically hooks into the standard `Nirmala.ttf` font provided by Microsoft. Multi-language exports will work out-of-the-box.
-- **On Linux/Cloud**: You must ensure a Unicode TTF font is accessible to the backend Python server. You can specify this explicitly in your backend `.env` file:
-  ```env
-  NIRMALA_FONT_PATH=/path/to/your/custom/unicode_font.ttf
-  ```
+## 🛡️ Privacy & Security
+MediLens is built with privacy-first principles. Reports are processed securely, data is stored in enterprise-grade PostgreSQL, and AI interactions are strictly gated to provide medical information without diagnostic prescriptions.
 
 ---
-*Built to empower patients with knowledge, clarity, and peace of mind.*
+<div align="center">
+*Built with ❤️ to empower patients with knowledge and peace of mind.*
+</div>
